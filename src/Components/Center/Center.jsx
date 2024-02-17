@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineSearch } from "react-icons/md";
 import "./Center.css";
 import CenterTableProp from "./CenterTableProp";
 function Center() {
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredDataList, setFilteredDataList] = useState([]);
+
   const description = (
     <p>
       This is an <a href="/">arbitrage opportunity</a>, with the max gain being
@@ -176,72 +179,19 @@ function Center() {
         </div>
       ),
     },
-
-    {
-      first: "NFLX",
-      second: "200",
-      third: "-0.25%",
-      fourth: "Low Risk",
-      color: "#D94111",
-      description: (
-        <div style={dataDescription}>
-          <p style={{ paddingTop: "20px" }}>
-            <span>$NFLX </span>
-            just announced an acquisition of <b>$NFLX</b>
-          </p>
-          {description}
-        </div>
-      ),
-    },
-    {
-      first: "NFLX",
-      second: "200",
-      third: "-0.25%",
-      fourth: "Low Risk",
-      color: "#D94111",
-      description: (
-        <div style={dataDescription}>
-          <p style={{ paddingTop: "20px" }}>
-            <span>$NFLX </span>
-            just announced an acquisition of <b>$NFLX</b>
-          </p>
-          {description}
-        </div>
-      ),
-    },
-    {
-      first: "NFLX",
-      second: "200",
-      third: "-0.25%",
-      fourth: "Low Risk",
-      color: "#D94111",
-      description: (
-        <div style={dataDescription}>
-          <p style={{ paddingTop: "20px" }}>
-            <span>$NFLX </span>
-            just announced an acquisition of <b>$NFLX</b>
-          </p>
-          {description}
-        </div>
-      ),
-    },
-    {
-      first: "NFLX",
-      second: "200",
-      third: "-0.25%",
-      fourth: "Low Risk",
-      color: "#D94111",
-      description: (
-        <div style={dataDescription}>
-          <p style={{ paddingTop: "20px" }}>
-            <span>$NFLX </span>
-            just announced an acquisition of <b>$NFLX</b>
-          </p>
-          {description}
-        </div>
-      ),
-    },
   ];
+  const handleSearchInputChange = (event) => {
+    const inputValue = event.target.value;
+    setSearchInput(inputValue);
+
+    const filteredList = dataList.filter((data) =>
+      data.first.toLowerCase().includes(inputValue.toLowerCase())
+    );
+    setFilteredDataList(filteredList);
+  };
+
+  const displayedDataList = searchInput ? filteredDataList : dataList;
+
   return (
     <div>
       <div className="titleAndSearchContainer">
@@ -251,6 +201,8 @@ function Center() {
             placeholder="Search By..."
             type="text"
             className="searchInput"
+            value={searchInput}
+            onChange={handleSearchInputChange}
           />
           <span className="searchIcon">
             <MdOutlineSearch />
@@ -275,19 +227,17 @@ function Center() {
       <div className="tableContainer">
         <table>
           <tbody>
-            {dataList.map((data, index) => {
-              return (
-                <CenterTableProp
-                  key={index}
-                  first={data.first}
-                  second={data.second}
-                  third={data.third}
-                  fourth={data.fourth}
-                  description={data.description}
-                  color={data.color}
-                />
-              );
-            })}
+            {displayedDataList.map((data, index) => (
+              <CenterTableProp
+                key={index}
+                first={data.first}
+                second={data.second}
+                third={data.third}
+                fourth={data.fourth}
+                description={data.description}
+                color={data.color}
+              />
+            ))}
           </tbody>
         </table>
       </div>
