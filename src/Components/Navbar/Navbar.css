@@ -39,22 +39,53 @@
   margin: 0 auto;
   list-style: none;
   display: flex;
+  /* justify-content: center; */
   flex-direction: column;
   height: 100%;
   width: 100%;
   margin-top: 30px;
 }
 .leftNav ul li {
+  display: flex;
   font-size: 19px;
   margin: 8px 12px;
   list-style: none;
   white-space: nowrap;
+  position: relative;
+}
+.leftNav ul li:hover svg path,
+.leftNav ul li:nth-child(-n + 2):hover span {
+  color: #53acff !important;
+}
+.leftNav ul li:not(:nth-child(-n + 2)):hover {
+  /* backdrop-filter: blur(100%); */
+  background-color: #1f4f7d; /* Adjust blue color and opacity */
+  border-radius: 5px;
+  /* width: fit-content; */
+  /* filter: blur(1px); */
+}
+.leftNav ul li:not(:nth-child(-n + 2)):hover::before {
+  content: "coming soon";
+  backdrop-filter: blur(10px) saturate(70%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: transparent; */
+  color: #ffffff;
+  padding: 10px 25px;
+  /* font-size: 14px; */
+
+  z-index: 14;
 }
 .leftNav ul li span {
   margin-left: 0px;
   font-size: 0px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.navUl ul li:hover {
+  color: #53acff;
 }
 
 /* hover animation */
