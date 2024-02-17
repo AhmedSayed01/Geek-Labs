@@ -22,7 +22,7 @@ function Navbar() {
                   fill="white"
                 />
               </svg>
-              <span style={{ color: "#ffffff" }}>Home</span>
+              <span style={{ color: "#ffffff" }}>Alerts</span>
             </li>
             <li>
               <svg
@@ -42,7 +42,7 @@ function Navbar() {
                 />
               </svg>
 
-              <span style={{ color: "#ffffff" }}>Products</span>
+              <span style={{ color: "#ffffff" }}>Training</span>
             </li>
             <li>
               <svg
@@ -65,7 +65,7 @@ function Navbar() {
                   fill="#ffffff4d"
                 />
               </svg>
-              <span style={{ color: "#ffffff4d" }}>Services</span>
+              <span style={{ color: "#ffffff4d" }}>Automation</span>
             </li>
             <li>
               <svg
@@ -80,7 +80,7 @@ function Navbar() {
                   fill="#ffffff4d"
                 />
               </svg>
-              <span style={{ color: "#ffffff4d" }}>Contact</span>
+              <span style={{ color: "#ffffff4d" }}>Portfolio</span>
             </li>
             <li>
               <svg
@@ -100,7 +100,7 @@ function Navbar() {
                 />
               </svg>
 
-              <span style={{ color: "#ffffff4d" }}>Contact</span>
+              <span style={{ color: "#ffffff4d" }}>Trading</span>
             </li>
           </ul>
         </div>

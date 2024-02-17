@@ -22,11 +22,14 @@
   margin-top: 25px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .mainContent {
     flex-direction: column-reverse;
     margin-left: 25px;
   }
+}
+
+@media screen and (max-width: 768px) {
   .mainContent .centerPart {
     width: 95%;
     margin-left: 25px;
