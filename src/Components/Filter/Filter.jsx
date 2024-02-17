@@ -1,54 +1,54 @@
-import WheelPicker from "react-simple-wheel-picker";
-import styled from "styled-components";
+// import WheelPicker from "react-simple-wheel-picker";
+// import styled from "styled-components";
 import { MdOutlineSearch } from "react-icons/md";
 import "./Filter.css";
 function Filter() {
-  const setKeyValue = (arr) => {
-    return arr.map((item) => {
-      const dataSet = {
-        id: item,
-        value: item,
-      };
-      return dataSet;
-    });
-  };
-  const newOptionGroups = (optionGroups) => {
-    let groups = {};
-    for (const group in optionGroups) {
-      groups[group] = setKeyValue(optionGroups[group]);
-    }
-    return groups;
-  };
-  const optionGroups = {
-    title: ["Big Option Buys", "Merger Arbitrage", "Short Reports"],
-    firstName: ["Stacks", "Options", "Futures"],
-    // secondName: ["Lennon", "Jackson", "Jordan", "Legend", "Taylor"]
-  };
-  const opGroups = newOptionGroups(optionGroups);
+  // const setKeyValue = (arr) => {
+  //   return arr.map((item) => {
+  //     const dataSet = {
+  //       id: item,
+  //       value: item,
+  //     };
+  //     return dataSet;
+  //   });
+  // };
+  // const newOptionGroups = (optionGroups) => {
+  //   let groups = {};
+  //   for (const group in optionGroups) {
+  //     groups[group] = setKeyValue(optionGroups[group]);
+  //   }
+  //   return groups;
+  // };
+  // const optionGroups = {
+  //   title: ["Big Option Buys", "Merger Arbitrage", "Short Reports"],
+  //   firstName: ["Stacks", "Options", "Futures"],
+  //   // secondName: ["Lennon", "Jackson", "Jordan", "Legend", "Taylor"]
+  // };
+  // const opGroups = newOptionGroups(optionGroups);
 
-  let pickerColumn = [];
-  const handleOnChange = (target) => {
-    console.log(target);
-  };
-  for (const group in opGroups) {
-    const data = opGroups[group];
+  // let pickerColumn = [];
+  // const handleOnChange = (target) => {
+  //   console.log(target);
+  // };
+  // for (const group in opGroups) {
+  //   const data = opGroups[group];
 
-    pickerColumn.push(
-      <StyledWheelPicker
-        data={data}
-        onChange={handleOnChange}
-        height={200}
-        width={200}
-        // titleText="Enter value same as aria-label"
-        itemHeight={36}
-        selectedID={data[0].id}
-        color="#999999"
-        activeColor="black"
-        backgroundColor="transparent"
-        shadowColor="none"
-      />
-    );
-  }
+  //   pickerColumn.push(
+  //     <StyledWheelPicker
+  //       data={data}
+  //       onChange={handleOnChange}
+  //       height={200}
+  //       width={200}
+  //       // titleText="Enter value same as aria-label"
+  //       itemHeight={36}
+  //       selectedID={data[0].id}
+  //       color="#999999"
+  //       activeColor="black"
+  //       backgroundColor="transparent"
+  //       shadowColor="none"
+  //     />
+  //   );
+  // }
 
   return (
     <div>
@@ -474,7 +474,7 @@ function Filter() {
               <h3 className="strategyTitle">Strategy</h3>
               <div className="VerticalCarouselContainer">
                 <div className="VerticalCarousel">
-                  <PickerContainer>{pickerColumn[0]}</PickerContainer>
+                  {/* <PickerContainer>{pickerColumn[0]}</PickerContainer> */}
                 </div>
               </div>
             </div>
@@ -482,7 +482,7 @@ function Filter() {
               <h3 className="AssetsTitle">Assets</h3>
               <div className="VerticalCarouselContainer">
                 <div className="VerticalCarousel">
-                  <PickerContainer>{pickerColumn[1]}</PickerContainer>
+                  {/* <PickerContainer>{pickerColumn[1]}</PickerContainer> */}
                 </div>
               </div>
             </div>
@@ -498,11 +498,11 @@ function Filter() {
   );
 }
 
-const PickerContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+// const PickerContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
+// `;
 
-const StyledWheelPicker = styled(WheelPicker)``;
+// const StyledWheelPicker = styled(WheelPicker)``;
 
 export default Filter;
