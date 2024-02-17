@@ -1,4 +1,3 @@
-import { useState } from "react";
 import WheelPicker from "react-simple-wheel-picker";
 import styled from "styled-components";
 import { MdOutlineSearch } from "react-icons/md";

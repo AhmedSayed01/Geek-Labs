@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../assets/Images/street suite logo-04.png";
 import "./Navbar.css";
-import avatar from "../../assets/Images/avatarIcon.png";
 
 function Navbar() {
   return (

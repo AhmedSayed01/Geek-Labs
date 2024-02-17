@@ -1,5 +1,4 @@
 import "./App.css";
-import { MdOutlineSearch } from "react-icons/md";
 import Filter from "./Components/Filter/Filter";
 import Navbar from "./Components/Navbar/Navbar";
 import Center from "./Components/Center/Center";
