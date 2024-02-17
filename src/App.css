@@ -1,6 +1,6 @@
 .Container {
   min-height: 100vh; /* to be deleted later */
-
+  width: 100%;
   display: flex;
   position: relative;
 }
@@ -11,13 +11,14 @@
   width: 5%;
 }
 .mainContent {
-  width: 100%;
-  padding: 20px 30px;
+  width: 95%;
+  /* padding: 20px 30px; */
   display: flex;
-  margin: auto;
+  /* margin: 20px 1%; */
 }
 .mainContent .centerPart {
   width: 100%;
+  margin-left: 20px;
   overflow-x: auto;
   margin-top: 25px;
 }
@@ -27,11 +28,16 @@
     flex-direction: column-reverse;
     margin-left: 25px;
   }
+
+  .mainContent .centerPart {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .mainContent .centerPart {
-    width: 95%;
+    max-width: 95%;
+    overflow-x: hidden;
     margin-left: 25px;
   }
 }

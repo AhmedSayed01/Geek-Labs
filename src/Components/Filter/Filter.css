@@ -4,6 +4,7 @@
   background-color: #181818;
   min-width: 400px;
   margin-top: 20px;
+  margin-right: 20px;
   border-radius: 10px;
 }
 .FilterContainer .FilterTitle {
@@ -280,6 +281,13 @@ input[type="radio"]:checked + .customRadioButton::after {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 992px) {
+  .FilterContainer {
+    width: 100%;
+    margin-right: 0;
+    border-radius: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .industryExpand {
     margin-left: 20%;

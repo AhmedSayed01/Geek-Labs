@@ -179,6 +179,70 @@ function Center() {
         </div>
       ),
     },
+    {
+      first: "NFLX",
+      second: "200",
+      third: "-0.25%",
+      fourth: "Low Risk",
+      color: "#D94111",
+      description: (
+        <div style={dataDescription}>
+          <p style={{ paddingTop: "20px" }}>
+            <span>$NFLX </span>
+            just announced an acquisition of <b>$NFLX</b>
+          </p>
+          {description}
+        </div>
+      ),
+    },
+    {
+      first: "NFLX",
+      second: "200",
+      third: "-0.25%",
+      fourth: "Low Risk",
+      color: "#D94111",
+      description: (
+        <div style={dataDescription}>
+          <p style={{ paddingTop: "20px" }}>
+            <span>$NFLX </span>
+            just announced an acquisition of <b>$NFLX</b>
+          </p>
+          {description}
+        </div>
+      ),
+    },
+    {
+      first: "NFLX",
+      second: "200",
+      third: "-0.25%",
+      fourth: "Low Risk",
+      color: "#D94111",
+      description: (
+        <div style={dataDescription}>
+          <p style={{ paddingTop: "20px" }}>
+            <span>$NFLX </span>
+            just announced an acquisition of <b>$NFLX</b>
+          </p>
+          {description}
+        </div>
+      ),
+    },
+    {
+      first: "NFLX",
+      second: "200",
+      third: "-0.25%",
+      fourth: "Low Risk",
+      color: "#D94111",
+      description: (
+        <div style={dataDescription}>
+          <p style={{ paddingTop: "20px" }}>
+            <span>$NFLX </span>
+            just announced an acquisition of <b>$NFLX</b>
+          </p>
+          {description}
+        </div>
+      ),
+    },
   ];
   const handleSearchInputChange = (event) => {
     const inputValue = event.target.value;
@@ -193,7 +257,7 @@ function Center() {
   const displayedDataList = searchInput ? filteredDataList : dataList;
 
   return (
-    <div>
+    <>
       <div className="titleAndSearchContainer">
         <h1 className="alertsH1">ALERTS</h1>
         <div className="searchContainer">
@@ -241,7 +305,7 @@ function Center() {
           </tbody>
         </table>
       </div>
-    </div>
+    </>
   );
 }
 
