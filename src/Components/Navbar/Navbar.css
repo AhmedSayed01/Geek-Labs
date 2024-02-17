@@ -1,0 +1,136 @@
+.leftNav {
+  position: fixed;
+  min-height: 100vh;
+  background-color: #00000061;
+  width: min-content;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.leftNav:hover {
+  background-color: #000000;
+  padding: 0 20px;
+}
+
+.leftNav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 60px;
+  transition: all 0.3s ease-in-out;
+}
+.leftNav .navUl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+}
+.leftNav ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-top: 30px;
+}
+.leftNav ul li {
+  font-size: 19px;
+  margin: 8px 12px;
+  list-style: none;
+  white-space: nowrap;
+}
+.leftNav ul li span {
+  margin-left: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* hover animation */
+.leftNav:hover ul li span {
+  margin-left: 15px;
+  font-size: 19px;
+}
+.leftNav:hover .logo {
+  width: 124px;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatarIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #53acff;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.avatarInfo h1 {
+  margin: 0;
+  margin-top: 20px;
+}
+.avatarInfo h1,
+.avatarInfo p {
+  font-size: 0px;
+  white-space: nowrap;
+  /* margin: 0; */
+  transition: all 0.3s ease-in-out;
+}
+.avatarInfo h1 {
+  color: #ffffff;
+}
+.avatarInfo p {
+  color: #979797;
+}
+
+.avatar {
+  margin-bottom: 20px;
+}
+
+.avatar .streetSuite {
+  font-size: 0px;
+  font-weight: 400;
+  color: #424242;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.leftNav:hover .avatarIcon {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease-in-out;
+}
+.leftNav .avatarInfo {
+  transition: all 0.3s ease-in-out;
+}
+.leftNav:hover .avatarInfo {
+  margin-left: 15px;
+}
+.leftNav:hover .avatarInfo h1 {
+  font-size: 16px;
+}
+.leftNav:hover .avatarInfo p {
+  font-size: 14px;
+}
+.leftNav:hover .avatar .streetSuite {
+  font-size: 14px;
+  text-align: center;
+}

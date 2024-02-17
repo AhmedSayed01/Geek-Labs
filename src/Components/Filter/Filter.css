@@ -1,0 +1,296 @@
+/* filter */
+
+.FilterContainer {
+  background-color: #181818;
+  min-width: 400px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.FilterContainer .FilterTitle {
+  display: flex;
+  justify-content: center;
+  color: #f5f5f5;
+  font-size: 24px;
+  padding: 0 20px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.underHeadlineContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 30px;
+}
+.underHeadlineContainer h4 {
+  color: #f5f5f5;
+  font-size: 14px;
+  color: #979797;
+}
+.underHeadlineContainer button {
+  border-radius: 5px;
+  background-color: transparent;
+  color: #f5f5f5;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.currentFilterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px 10px 30px;
+  border-radius: 7px;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  background-color: #202020;
+}
+.currentFilterContainer span {
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4.42px;
+  background-color: #53acff;
+  width: 86.39px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FilterSet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+  background-color: #202020;
+  padding: 0 10px 30px;
+  border-radius: 7px;
+  margin: 10px;
+}
+.FilterSet h3 {
+  color: #f5f5f5;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.FilterSet .searchContainer {
+  margin: 0;
+}
+.FilterSet .searchContainer .searchInput {
+  margin: 10px;
+}
+.FilterSet .searchContainer .searchIcon {
+  color: #6b6b6b;
+  right: 5%;
+  top: 56%;
+  font-size: 25px;
+}
+.expandItems {
+  display: flex;
+  align-items: center;
+  color: #f5f5f5;
+  font-size: 15px;
+  font-weight: bold;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+
+.FilterIndustryItems {
+  display: flex;
+  gap: 15px;
+  margin: 0 10px;
+  /* padding: 0 10px; */
+  border-radius: 7px;
+  background-color: #202020;
+}
+.FilterIndustryItemsLeft,
+.FilterIndustryItemsRight {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  border-radius: 7px;
+  background-color: #202020;
+}
+.FilterIndustryItemsLeft::before,
+.FilterIndustryItemsRight::before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  width: 2px;
+  padding: 1.5rem 0;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+.FilterIndustryItemsLeft::before {
+  height: 75%;
+}
+.FilterIndustryItemsRight::before {
+  height: 60%;
+}
+.FilterIndustryItems .FilterIndustryItemContainer {
+  margin-top: 7px;
+  border-radius: 7px;
+  background-color: #202020;
+  white-space: nowrap;
+}
+.FilterIndustryItems .FilterIndustryItemContainer span {
+  font-size: 13px;
+  margin-left: 5px;
+  white-space: nowrap;
+  color: #f5f5f5;
+}
+
+.MarketAndRiskContainer {
+  margin-top: 20px;
+  display: flex;
+  gap: 21.5%;
+}
+.customRadioButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #494949;
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
+}
+
+.customRadioButton::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #202020;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style the radio button when checked */
+input[type="radio"]:checked + .customRadioButton::after {
+  background-color: #53acff;
+}
+
+.radioButton {
+  height: fit-content;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
+}
+.radioButton label {
+  color: #f5f5f5;
+  font-size: 15px;
+}
+.StrategyAndAssetsContainer {
+  display: flex;
+  /* justify-content: center; */
+  gap: 10%;
+  margin-left: 15px;
+  /* margin-top: 20px; */
+}
+.StrategyAndAssetsContainer .strategyTitle {
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
+.AssetsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AssetsContainer .AssetsTitle {
+  margin-bottom: 5px;
+  margin-left: 17px;
+}
+.VerticalCarouselContainer {
+  height: 100%;
+}
+
+.VerticalCarousel {
+  /* height: 30px; */
+  overflow-y: auto;
+}
+
+.kPARwi {
+  position: absolute;
+  width: 100px !important;
+  height: fit-content !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow-y: hidden !important;
+}
+.kPARwi div:first-child,
+.kPARwi div:last-child {
+  display: none !important;
+}
+
+.jgUYwy {
+  overflow-y: hidden !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+.cGCpTF {
+  color: transparent !important;
+}
+
+.dhofVk {
+  justify-content: center !important;
+  min-height: 30px !important;
+}
+
+.dhofVk[aria-selected="true"] .bpPsiW {
+  background-color: #53acff !important;
+}
+
+.bpPsiW {
+  font-size: 12px !important;
+  white-space: nowrap;
+  padding: 5px 20px !important;
+  border-radius: 10px;
+}
+
+.ApplyButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ApplyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 40%;
+  border: none;
+  border-radius: 7px;
+  background-color: #53acff;
+  color: #f5f5f5;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .industryExpand {
+    margin-left: 20%;
+  }
+  .FilterIndustryItems {
+    justify-content: center;
+  }
+  .MarketAndRiskContainer {
+    justify-content: center;
+  }
+  .StrategyAndAssetsContainer {
+    justify-content: center;
+  }
+}
